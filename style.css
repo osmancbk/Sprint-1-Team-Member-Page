@@ -1,0 +1,108 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin:40px;
+    padding-left: 50px;
+    
+}
+
+.container{
+    padding-top: 100px; 
+    padding-left: 50px;
+    margin:40px;
+    width:100%;
+    /* height: fit-content; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "pic1 pic2 pic3"
+    "pic4 pic5 pic6"
+    ;
+ 
+
+}
+
+
+
+
+
+.picture{
+    width: 100%;
+    height:100vr ;
+    /* background-color: aqua;
+    border: 1px solid red; */
+}
+#pic1{
+    grid-area: pic1;
+}
+#pic2{
+    grid-area: pic2;
+}
+#pic3{
+    grid-area: pic3;
+}
+#pic4{
+    grid-area: pic4;
+}
+#pic5{
+    grid-area: pic5;
+}
+#pic6{
+    grid-area: pic6;
+}
+img{
+    width: 75%;
+    height: auto;
+    position: relative; 
+    border-radius: 20px;
+}
+.picture p {
+    writing-mode: vertical-lr;
+    position: absolute;
+    display: inline;
+}
+
+@media all and (min-width: 768px){
+    #pic2 , #pic5{
+        padding-top: 100px;
+    }
+
+}
+
+
+@media all and (max-width: 768px) {
+    header{
+        /* display: flex;
+        justify-content: space-around; */
+        display: block;
+        padding-left: 50px;
+        /* margin:40px; */
+    }
+    
+
+    .container{
+    padding-top: 100px; 
+    padding-left: 50px;
+    /* margin:40px; */
+    width: 100%;
+    /* height: fit-content; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "pic1 pic2"
+    "pic3 pic4"
+    "pic5 pic6"
+    ;
+    }
+    #pic2 , #pic4 ,#pic6{
+        padding-top: 100px;
+    }
+
+
+
+
+
+}
