@@ -1,108 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
 
-header{
+:root {
+    --heading-text: 'PT Serif', serif;
+    --main-text: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.header {
     display: flex;
     justify-content: space-between;
-    margin:40px;
-    padding-left: 50px;
+    margin: 100px; 
+}
+
+.header .headerLeft {
+   font-family: var(--heading-text);
+   width: 33%;
+}
+
+.header .headerLeft h1 {
+    font-size: 2.1rem;
     
 }
 
-.container{
-    padding-top: 100px; 
-    padding-left: 50px;
-    margin:40px;
-    width:100%;
-    /* height: fit-content; */
+.header .headerRight{
+   font-family: var(--main-text);
+   width: 50%;
+}
+
+
+.header .headerRight h3 {
+    margin-bottom: 20px;
+}
+
+
+.main-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
-    grid-template-areas: 
-    "pic1 pic2 pic3"
-    "pic4 pic5 pic6"
-    ;
- 
-
+    margin: 0 8%;
+    grid-template-areas:
+    "member1 member2 member3"
+    "member4 member5 member6";
 }
 
 
 
+.member1{
+    grid-area:member1;
+}
+.member2{
+    grid-area:member2;
+    top: 15%;
+}
+.member3{
+    grid-area:member3;
+}
+.member4{
+    grid-area:member4;
+}
+.member5{
+    grid-area:member5;
+    top: 15%;
+}
+.member6{
+    grid-area:member6;
+}
 
+.image-container{
+    margin-bottom: 75px;
+    position: relative;
+}
 
-.picture{
-    width: 100%;
-    height:100vr ;
-    /* background-color: aqua;
-    border: 1px solid red; */
+img {
+    box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    width: 22.1vw;
+    height: 65vh;
+   
+
+   
 }
-#pic1{
-    grid-area: pic1;
+
+.horizontal-text{
+    font-family: var(--main-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
 }
-#pic2{
-    grid-area: pic2;
-}
-#pic3{
-    grid-area: pic3;
-}
-#pic4{
-    grid-area: pic4;
-}
-#pic5{
-    grid-area: pic5;
-}
-#pic6{
-    grid-area: pic6;
-}
-img{
-    width: 75%;
-    height: auto;
-    position: relative; 
-    border-radius: 20px;
-}
-.picture p {
+.vertical-text{
+    font-family: var(--heading-text);
+    font-weight: lighter;
     writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 0.8rem;
     position: absolute;
-    display: inline;
-}
-
-@media all and (min-width: 768px){
-    #pic2 , #pic5{
-        padding-top: 100px;
-    }
-
-}
-
-
-@media all and (max-width: 768px) {
-    header{
-        /* display: flex;
-        justify-content: space-around; */
-        display: block;
-        padding-left: 50px;
-        /* margin:40px; */
-    }
+    /* top: 0;
+    right: 40px; */
     
+}
 
-    .container{
-    padding-top: 100px; 
-    padding-left: 50px;
-    /* margin:40px; */
-    width: 100%;
-    /* height: fit-content; */
+
+@media  (max-width: 992px) { 
+.header {
+    display: flex;
+    flex-direction: column;
+    margin: 20px; 
+}
+
+.header .headerLeft {
+   font-family: var(--heading-text);
+   width: 100%;
+   margin-bottom: 20px;           
+   
+}
+
+.header .headerRight{
+   font-family: var(--main-text);
+   width: 100%;
+}
+.header .headerRight h3 {
+    margin-bottom: 0px;
+}
+
+.main-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "pic1 pic2"
-    "pic3 pic4"
-    "pic5 pic6"
-    ;
-    }
-    #pic2 , #pic4 ,#pic6{
-        padding-top: 100px;
-    }
+    margin: 0 4.2%;
+    grid-template-areas:
+    "member1 member2"
+    "member3 member4"
+    "member5 member6";
+}
+.member1{
+    grid-area:member1;
+}
+.member2{
+    grid-area:member2;
+    top: 15%;
+}
+.member3{
+    grid-area:member3;
+}
+.member4{
+    grid-area:member4;
+    top: 15%;
+}
+.member5{
+    grid-area:member5;
+    top: 0;
+}
+.member6{
+    grid-area:member6;
+    top: 15%;
+}
+
+img {
+    box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    width: 35vw;
+    height: auto;
+
+   
+}
+.vertical-text{
+    font-family: var(--heading-text);
+    font-weight: lighter;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    position: absolute;
+    /* top: 0;
+    right: 20px; */
+    
+}
 
 
+}
 
-
+@media (max-width: 1200px) { 
 
 }
